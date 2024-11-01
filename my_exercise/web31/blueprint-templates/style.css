@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    margin: 0 auto;
+    width: 1200px;
+    font-family: '微軟正黑體', Arial, sans-serif;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 1200px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    width: 300px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.header li {
+    list-style: none;
+    float: left;
+    padding-right: 20px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header a:hover {
+    color: #3498db;
+}
+
+.banner h1 {
+    background-color: #34495e;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.banner li {
+    list-style: none;
+}
+
+.box {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.nav {
+    width: 200px;
+    background-color: #3498db;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.nav li {
+    list-style: none;
+    padding: 15px 10px;
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav li:hover {
+    background-color: #2980b9;
+}
+
+.nav li:last-child {
+    border-bottom: none;
+}
+
+.content {
+    width: 1000px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.content p {
+    color: #2c3e50;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.footer h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #ecf0f1;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #bdc3c7;
+}
+
+/* 添加響應式懸停效果 */
+.nav li,
+.header a {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav li:after,
+.header a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ecf0f1;
+    transition: width 0.3s ease;
+}
+
+.nav li:hover:after,
+.header a:hover:after {
+    width: 100%;
+}
+
+/* 添加漸變背景 */
+.banner h1 {
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+}
+
+/* 添加內容區塊的hover效果 */
+.content {
+    transition: transform 0.3s ease;
+}
+
+.content:hover {
+    transform: translateY(-5px);
+}
