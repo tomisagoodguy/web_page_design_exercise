@@ -43,9 +43,18 @@ body{
     width: 200px;
 }
 .nav ul{}
-.nav li{}
+.nav li{
+    list-style: none;
+}
 .nav li a{}
-.nav li a:hover{}
+.nav li a:hover{
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: #ff9705 1px dashed;
+    color: #3c96fc;
+    text-decoration: none;
+}
 
 .content{
     background-color: #3c96fc;

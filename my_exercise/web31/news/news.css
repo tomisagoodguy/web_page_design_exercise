@@ -1,0 +1,9 @@
+.content p img.left-photo {
+    float: left;
+    padding: 0 10px 10px 0;  /* 上 右 下 左 */
+}
+
+.content p img.right-photo {
+    float: right;
+    padding: 0 0 10px 10px;  /* 上 右 下 左 */
+}
