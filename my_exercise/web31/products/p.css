@@ -6,3 +6,32 @@
     padding: 20px;
     float: left;
 }
+
+
+/* 11/15上課 */
+/* transition 過渡 */
+
+.content .allbox{
+    
+}
+
+.allbox a{
+    text-decoration: none;
+    color: black;
+}
+
+.allbox a .pbox{
+  transition: all 1s
+}
+
+.allbox a:hover .pbox{
+  background-color: #e03d3d;
+}
+
+.allbox a .pbox img{
+    transition: all 1s;
+}
+
+.allbox a:hover .pbox img{
+
+}
