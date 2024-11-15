@@ -1,76 +1,70 @@
-* {
-	padding: 0;
+*{
 	margin: 0;
+	padding: 0;
 }
-.wrapper {
-	margin: 0 auto;
+
+body{
+	background-color: #f1c571;
+	display: flex;
+	justify-content: center;
+}
+
+.container{
+	background-color: #16f61a;
 	width: 1200px;
 }
-.header {
-	background-image: url(banner.png);
-	width: 1200px;
+
+.header{
+	/* background-color: #eff322; */
+	background-image: url(./banner.png);
 	height: 250px;
-	position:relative;
-}
-.header h1 {
-	position: absolute;
-	left: 300px;
-	top: 70px;
-	animation: logoani 5s infinite alternate;
-}
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 50px 0px 280px;
 
-@keyframes logoani{
-	
-	0%{ top:-200px;}
-	40%{top:70px; transform:perspective(250px) rotateY(0deg);}
-	60%{ transform:perspective(250px) rotateY(360deg);}
-	80%{transform:perspective(250px) rotateY(0deg); opacity:1;}
-	90%{ opacity:0;}
-	100%{ opacity:1;}
 }
+.header h1{
+	/* background-color: #a519e1; */
+	padding-top: 50px;
+}
+.header ul{flex;
 
-@-webkit-keyframes logoani{
-	
-	0%{ top:-200px;}
-	40%{top:70px; transform:perspective(250px) rotateY(0deg);}
-	60%{ transform:perspective(250px) rotateY(360deg);}
-	80%{transform:perspective(250px) rotateY(0deg); opacity:1;}
-	90%{ opacity:0;}
-	100%{ opacity:1;}
 }
+.header li{
+	list-style: none;
+}
+.header li a{}
+.header li a:hover{}
 
-.nav {
-	background-color:#F90;
-	height: 50px;
-	padding: 20px 40px;
+.nav{
+	background-color: #e61717;
+	padding: 10px;
+	overflow: hidden;
+
 }
-.nav ul {}
-.nav li {
+.nav ul{}
+.nav li{
+	list-style: none;
 	float: left;
-	list-style-type: none;
 }
-.nav li a {
+.nav li a{
 	display: block;
-	width: 150px;
+	width: 160px;
 	height: 50px;
 	text-align: center;
 	line-height: 50px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
 	text-decoration: none;
-	color: #330;
-	border-radius:40px;
-	text-shadow:#FFF 1px 1px 1px;
-	background-color:rgba(255,255,255,0.3);
-	margin-right:10px;
-	box-shadow:#333 2px 2px 2px;
+	/* margin-right: 10px; */
+	margin: 0 10px;
+	background-color: #22aedd;
+
 }
-.nav li a:hover {
-	color: #FFF;
-	background-color: #330;
-	text-shadow:none;
-	box-shadow:none;
+
+
+.content{
+	background-color: #e3e323;
 }
+<<<<<<< Updated upstream
 .content {
 	background-color: #F2EEDB;
 	padding: 15px 20px;
@@ -101,3 +95,16 @@
 	margin-right: 20px;
 }
 .footer p {}
+=======
+.content h2{}
+.content {}
+
+.footer{}
+.footer h2 {}
+
+
+
+
+
+
+>>>>>>> Stashed changes
