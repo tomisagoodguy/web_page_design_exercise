@@ -1,36 +1,150 @@
-*{}
-html,body{}
-.header{}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: Arial, Helvetica,"微軟正黑體", sans-serif;
+    font-size: 18px;
+}
+.header{
+    background-color: #C73E3A;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
 .header h1{}
 .header ul{}
-.header li{}
-.header li a{}
+.header li{
+    float: left;
+    list-style: none;
+    /* padding: 10px; */
+}
+.header li a{
+    margin: 5px;
+}
 .header li a:hover{}
 
 .banner{}
-.banner img{}
+.banner img{
+    width: 100%;
+    height: auto;
+}
 
-.office{}
-.office .ofbox{}
-.office .ofbox img{}
-.office .ofbox p{}
+.office{
+    background-color: #eca1a1;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+.office .ofbox{
+    background-color: #65f54b;
+    width: 22%;
+    margin: 1%;
+    padding: 10px;
+    text-align: center;
 
-.ad{}
-.adbox{}
-.ad img{}
+}
+.office .ofbox img{
+    max-width: 100%;
+    height: auto;
+}
+.office .ofbox p{
+    margin-bottom: 8px;
+}
 
-.nav{}
-.nav .navbox{}
-.nav .navbox p{}
+.ad{
+    display: flex;
+    padding: 20px;
+    background-color: #706c6c;
+}
+.adbox{
+    background-color: #6a5f5fd3;
+    width: 25%;
+    /* 因為有四張圖 */
+}
+.ad img{
+    width: 100%;
+    height: auto;
+}
+
+.nav{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+.nav .navbox{
+    width: 12%;
+    margin: 1%;
+}
+.nav .navbox p{
+        margin-bottom: 8px;
+
+}
 .nav .navbox ul{}
-.nav .navbox li{}
-.nav .navbox li a{}
+.nav .navbox li{
+    list-style: none;
+}
+.nav .navbox li a{
+    margin-bottom: 5px;
+}
 .nav .navbox li a:hover{}
 
-.footer{}
+.footer{
+    background-color: #329649;
+    text-align: center;
+    padding: 20px;
+}
 .footer h2{}
 .footer p{}
 
 
+/* =============平板CSS============ */
 
+@media screen and (max-width:1200px) and (min-width:768px){
 
+    .office{
+        flex-wrap:wrap ;
+    }
+
+    .office .ofbox{
+        width: 44%;
+    }
+
+    .office .ofbox img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    }
+
+/* ------------手機CSS------------- */
+@media screen and (max-width: 768px){
+
+    .header ul{
+        display: none;
+    }
+    .office{
+        flex-wrap: wrap;
+    }
+    .office .ofbox{
+        width: 96%;
+    }
+    .ad{
+        flex-wrap: wrap;
+    }
+    .adbox {
+        width: 100%;
+    }
+
+    .adbox{
+        width: 100%;
+    }
+    .nav {
+        flex-wrap: wrap;
+    }
+    .nav .navbox{
+        width: 80%;
+    }
+}
