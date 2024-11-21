@@ -1,0 +1,473 @@
+/* 基礎設置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, '微軟正黑體', sans-serif;
+    font-size: 16px;
+    /* 縮小基礎字體大小 */
+    overflow-x: hidden;
+}
+
+/* Container設置 */
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    /* 設定最大寬度 */
+}
+
+/* Header設置 - 移除固定寬度計算 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 4rem;
+    /* 配合下方1234區域的左右留白 */
+    width: 100%;
+    background-color: rgb(28, 231, 51);
+}
+
+.logo {
+    height: 60px;
+    /* 縮小logo高度 */
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: rgb(19, 18, 18);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1rem;
+}
+
+.nav a:hover {
+    color: #d51010;
+}
+
+/* Banner設置 - 移除固定寬度計算 */
+.banner {
+    background-image: url('images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    /* 縮小高度 */
+    position: relative;
+    width: 100%;
+}
+
+.hero-content {
+    position: absolute;
+    left: 4rem;
+    /* 配合header和1234區域的左右留白 */
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-box {
+    display: flex;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.search-box input {
+    width: 300px;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    background-color: white;
+}
+
+.search-box input::placeholder {
+    color: #666;
+}
+
+.search-box button {
+    padding: 12px 30px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.search-box button:hover {
+    background-color: #333;
+    transition: background-color 0.3s;
+}
+
+/* 1234區域設置 - 調整寬度 */
+.steps-section {
+    width: 100%;
+    /* 縮小整體寬度 */
+    position: relative;
+    padding: 1.5rem 0;
+    margin:  auto 0 ;
+    /* 置中 */
+    max-width: 1200px;
+    /* 縮小最大寬度 */
+    height: auto;
+    background-color: #0de426;
+}
+
+.steps-container {
+    position: relative;
+    margin: 0 auto;
+    /* 改為auto置中 */
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+    /* 使用100%寬度 */
+    height: 450px;
+}
+
+.step-item {
+    position: relative;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    max-width: 100%;
+    /* 確保文字不會超出容器 */
+     word-break: break-word;
+            /* 在必要時強制換行 */
+}
+
+
+.step-box {
+    /* 新增的class，用來控制每個數字方塊的大小 */
+    width: 250px;
+    /* 控制寬度 */
+    height: 400px;
+    /* 控制高度 */
+    position: relative;
+    margin-top: 25px;
+}
+
+/* 其餘樣式保持不變 */
+.step-item.orange {
+    background-color: #FF8C00;
+}
+
+.step-item.red {
+    background-color: #FF4444;
+}
+
+.step-item.black {
+    background-color: #000000;
+}
+
+.step-item.gray {
+    background-color: #666666;
+}
+
+.step-item h2 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.step-item h3 {
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.step-item p {
+    color: white;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.arrow-icon {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+
+/* 可持續發展區塊設置 */
+.sustainable-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem;
+    background-color: #a3a7abe3;
+}
+
+.sustainable-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sustainable-container h2 {
+    font-size: 2rem;
+    color: #FF8C00;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    position: relative;
+}
+
+
+
+.sustainable-container p {
+    font-size: 1rem;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    /* 縮小最大寬度，讓文字更集中 */
+    white-space: pre-line;
+    word-wrap: break-word;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    /* 增加左右內邊距 */
+    display: block;
+    /* 確保區塊級顯示 */
+}
+
+.read-more-btn {
+    margin-top: 1.5rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #FF8C00;
+    /* 橘色背景 */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 2px solid #FF8C00;
+}
+
+.btn-primary:hover {
+    background-color: #ff9f2f;
+    /* hover時變成稍微淺一點的橘色 */
+    border-color: #ff9f2f;
+    color: #ffffff;
+}
+
+
+
+/* =================下面六張圖=================== */
+/* Gallery Section 樣式 */
+.gallery-section {
+    width: 100%;
+    position: relative;
+    padding: 1.5rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ed4d4d;
+}
+
+.gallery-wrapper {
+    width: 85%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.gallery-container {
+    position: relative;
+    width: 100%;
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.gallery-item {
+    width: calc(33.333% - 14px);
+    height: 450px;
+    position: relative;
+    flex: none;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-content {
+    height: 30%;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gallery-content h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.gallery-content p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    color: #FF8C00;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #ff9f2f;
+}
+
+/* Features Section 樣式 */
+.features-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem 4rem;
+    background-color: #fff;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.feature-item {
+    flex: 1;
+    text-align: center;
+    padding: 2rem;
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+}
+
+.feature-item h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 響應式設計 */
+@media screen and (max-width: 1200px) {
+    .gallery-wrapper {
+        width: 90%;
+    }
+
+    .gallery-row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .gallery-item {
+        width: calc(50% - 15px);
+    }
+
+    .features-section {
+        padding: 2rem;
+    }
+
+    .features-container {
+        flex-wrap: wrap;
+    }
+
+    .feature-item {
+        width: calc(50% - 15px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-wrapper {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .gallery-item {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+
+    .feature-item {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .features-section {
+        padding: 1rem;
+    }
+}
