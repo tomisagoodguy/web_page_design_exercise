@@ -29,7 +29,7 @@ body {
     padding: 10px 4rem;
     /* 配合下方1234區域的左右留白 */
     width: 100%;
-    background-color: rgb(28, 231, 51);
+    /* background-color: rgb(28, 231, 51); */
 }
 
 .logo {
@@ -131,12 +131,12 @@ body {
     /* 縮小整體寬度 */
     position: relative;
     padding: 1.5rem 0;
-    margin:  auto 0 ;
+    margin: auto 0;
     /* 置中 */
     max-width: 1200px;
     /* 縮小最大寬度 */
     height: auto;
-    background-color: #0de426;
+    /* background-color: #0de426; */
 }
 
 .steps-container {
@@ -161,8 +161,8 @@ body {
     height: 100%;
     max-width: 100%;
     /* 確保文字不會超出容器 */
-     word-break: break-word;
-            /* 在必要時強制換行 */
+    word-break: break-word;
+    /* 在必要時強制換行 */
 }
 
 
@@ -296,13 +296,15 @@ body {
 
 /* =================下面六張圖=================== */
 /* Gallery Section 樣式 */
+
 .gallery-section {
     width: 100%;
     position: relative;
     padding: 1.5rem 0;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #ed4d4d;
+    margin-bottom: 0;
+    /* 新增：移除底部間距 */
 }
 
 .gallery-wrapper {
@@ -325,18 +327,22 @@ body {
 
 .gallery-item {
     width: calc(33.333% - 14px);
-    height: 450px;
+    /* height: 450px; */
     position: relative;
     flex: none;
     overflow: hidden;
     background-color: #fff;
     border: 1px solid #eee;
     transition: transform 0.3s ease;
+    /* 方法一：使用 aspect-ratio 設置 1:1 的比例 */
+    aspect-ratio: 1;
+
 }
 
 .gallery-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
 }
 
 .gallery-image {
@@ -345,6 +351,20 @@ body {
     object-fit: cover;
     display: block;
 }
+
+/* 當 gallery-item 內沒有 gallery-content 時，圖片高度為 100% */
+.gallery-item:not(:has(.gallery-content)) .gallery-image {
+    height: 100%;
+}
+
+.gallery-image.icon-image {
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    margin-top: 15%;
+    object-fit: contain;
+}
+
 
 .gallery-content {
     height: 30%;
@@ -382,37 +402,64 @@ body {
     color: #ff9f2f;
 }
 
-/* Features Section 樣式 */
+/* Features Section 樣式修改 */
 .features-section {
     width: 100%;
     max-width: 1200px;
     margin: 3rem auto;
     padding: 2rem 4rem;
     background-color: #fff;
+    position: relative;
+    /* 新增：確保正確的層疊順序 */
 }
 
 .features-container {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 2rem;
+    /* 增加間距 */
+    width: 100%;
 }
 
 .feature-item {
     flex: 1;
     text-align: center;
+    background-color: #fff;
+    /* 添加白色背景 */
     padding: 2rem;
+    border: 1px solid #eee;
+    /* 添加淺色邊框 */
+}
+
+/* 修改圖標包裝器樣式 */
+.icon-wrapper {
+    width: 80px;
+    /* 縮小圖標尺寸 */
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background-color: #F86F3D;
+    /* 使用橘色背景 */
+    border-radius: 50%;
+    /* 圓形圖標 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .feature-icon {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 1.5rem;
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+    /* 將圖標變為白色 */
 }
 
 .feature-item h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #333;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    /* 大寫標題 */
     font-weight: 600;
 }
 
@@ -422,52 +469,182 @@ body {
     line-height: 1.6;
 }
 
-/* 響應式設計 */
-@media screen and (max-width: 1200px) {
-    .gallery-wrapper {
-        width: 90%;
+
+/* Background Section 樣式修改 */
+.background-section {
+    width: 100%;
+    margin-top: 0;
+    position: relative;
+    max-width: none;
+    height: 400px;
+    overflow: visible;
+    /* 新增固定高度 */
+}
+
+/* Image Credit 樣式 */
+.image-credit {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-top: 20px;
+    /* 與上方特色卡片的間距 */
+    width: 100%;
+    position: relative;
+    /* 改為相對定位 */
+}
+
+/* Features Section 樣式 */
+.features-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem 4rem;
+    background-color: transparent;
+    position: relative;
+    margin: -200px auto 0;
+    z-index: 2;
+    display: flex;
+    /* 新增 */
+    flex-direction: column;
+    /* 新增 */
+    align-items: center;
+    /* 新增，確保內容居中 */
+}
+
+
+
+.background-image-container {
+    width: 100%;
+    height: 100%;
+    /* 設置為100%高度 */
+    position: relative;
+    display: block;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    /* 設置為100%高度 */
+    object-fit: cover;
+    /* 確保圖片覆蓋整個容器 */
+    display: block;
+    vertical-align: bottom;
+}
+
+/* Features Section 樣式修改 */
+.features-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem 4rem;
+    background-color: transparent;
+    /* 改為透明背景 */
+    position: relative;
+    margin: -200px auto 0;
+    /* 使用負邊距往上移動 */
+    z-index: 2;
+    /* 確保在背景圖片上層 */
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+}
+
+.feature-item {
+    flex: 1;
+    text-align: center;
+    background-color: #fff;
+    /* 保持白色背景 */
+    padding: 2rem;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* 添加陰影效果 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* 添加過渡效果 */
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    /* 懸停時輕微上浮 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* 懸停時加深陰影 */
+}
+
+.footer {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+    /* 確保 footer 在內容不足時貼在底部 */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-text {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.footer-links {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.footer-link {
+    color: #8cb3d9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    color: #a8c7e4;
+}
+
+/* 響應式調整 */
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 30px 15px;
     }
 
-    .gallery-row {
-        flex-wrap: wrap;
-        justify-content: center;
+    .footer-content {
+        padding: 0 10px;
     }
 
-    .gallery-item {
-        width: calc(50% - 15px);
+    .footer-text {
+        font-size: 14px;
     }
 
-    .features-section {
-        padding: 2rem;
-    }
-
-    .features-container {
-        flex-wrap: wrap;
-    }
-
-    .feature-item {
-        width: calc(50% - 15px);
+    .footer-links {
+        font-size: 12px;
     }
 }
 
-@media screen and (max-width: 768px) {
-    .gallery-wrapper {
-        width: 95%;
-        padding: 10px;
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 25px 10px;
     }
 
-    .gallery-item {
-        width: 100%;
-        height: 400px;
-        margin-bottom: 20px;
+    .footer-content {
+        padding: 0 5px;
     }
 
-    .feature-item {
-        width: 100%;
-        margin-bottom: 2rem;
+    .footer-text {
+        font-size: 13px;
+        line-height: 1.4;
     }
 
-    .features-section {
-        padding: 1rem;
+    .footer-links {
+        font-size: 11px;
     }
 }
