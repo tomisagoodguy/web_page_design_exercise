@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, '微軟正黑體', sans-serif;
+    font-size: 18px;
+}
+
+/* header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header h1 {}
+
+header ul {}
+
+header ul li {
+    list-style: none;
+    float: left;
+}
+
+header ul li a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+header ul li a:hover {}
+
+/* banner */
+.banner{
+    background-color: #f66300;
+    background-image: url(./images/banner.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    padding: 30px;
+    box-sizing: border-box;
+    font-size: 30px;
+    line-height: 1.6;
+}
+
+.banner h1 {}
+
+.banner p {}
+
+.banner .typing {
+    font-size: 16px;
+}
+
+.banner input {
+    width: 300px;
+    padding: 5px;
+}
+
+.banner .typing a {
+    text-decoration: none;
+    border: grey 2px solid;
+    background-color: grey;
+    padding: 5px;
+    color: white;
+
+
+}
+
+.banner .typing a:hover {
+    background-color: #61b9f0;
+}
+
+/* block*/
+
+.block {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.block .bbox {
+    width: 22%;
+    padding: 20px;
+
+}
+
+.block .bbox h1 {
+    margin: 15px 0;
+}
+
+.block .bbox h3 {
+    margin: 10px 0;
+}
+
+.block .bbox p {
+    margin: 5px 0;
+}
+
+.block .block1 {
+    background-color: #f65b08;
+}
+
+.block .block2 {
+    background-color: #f60808;
+}
+
+.block .block3 {
+    background-color: #6c6c6c;
+}
+
+.block .block4 {
+    background-color: #b3b3b3;
+}
+
+
+
+/*info*/
+
+.info {
+    background-color: #c9c9c9;
+    text-align: center;
+    padding: 30px;
+}
+
+.info h1 {
+    color: #f57f09;
+    margin-bottom: 20px;
+}
+
+.info p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.info a {
+    text-decoration: none;
+    background-color: #ff7810;
+    color: white;
+    padding: 10px;
+}
+
+.info a:hover {
+    background-color: #973119;
+}
+
+
+/*product*/
+
+.product {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.product .pbox {
+    width: 30%;
+    height: auto;
+    text-align: center;
+    background-color: #cbcbcb;
+    border: 1px solid #000;
+}
+
+.product .pbox img.pic {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.product .pbox img.icon {
+    width: 120px;
+
+}
+
+.pbox2,
+.pbox4,
+.pbox6 {
+    padding: 40px;
+}
+
+
+/* adbox*/
+
+.adbox {
+    text-align: center;
+    background-image: url(./images/handbg.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 500px 0 30px 0;
+}
+
+.adbox .subadbox {
+    display: flex;
+    justify-content: center;
+
+}
+
+.adbox .subadbox .subicon {
+    width: 30%;
+    height: auto;
+    margin: 2%;
+    background-color: #edece0;
+    padding: 20px;
+
+}
+
+footer {
+    text-align: center;
+    background-color: #616161;
+    padding: 20px
+}
+
+footer h4 {}
+
+footer p {}
+
+/*平板*/
+@media screen and (max-width:1200px) and (min-width:769px) {
+
+    .block {
+        flex-wrap: wrap;
+    }
+
+    .block .bbox {
+        width: 44%;
+    }
+
+    .product {
+        flex-wrap: wrap;
+    }
+
+    .product .pbox {
+        width: 50%;
+    }
+
+
+
+}
+
+/*手機*/
+@media screen and (max-width:768px) {
+    .block {
+        flex-wrap: wrap;
+    }
+
+    .block .bbox {
+        width: 88%;
+    }
+
+    .product {
+        flex-wrap: wrap;
+    }
+
+    .product .pbox {
+        width: 100%;
+    }
+
+    .adbox .subadbox {
+        flex-wrap: wrap;
+    }
+
+    .adbox .subadbox .subicon {
+        width: 60%;
+    }
+
+}
